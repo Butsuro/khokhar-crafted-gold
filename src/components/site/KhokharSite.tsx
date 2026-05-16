@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useReveal } from "@/hooks/useReveal";
 import heroImg from "@/assets/hero.jpg";
+import logoImg from "@/assets/logo.jpg";
 import civilImg from "@/assets/civil.jpg";
 import electricalImg from "@/assets/electrical.jpg";
 import mechanicalImg from "@/assets/mechanical.jpg";
@@ -62,10 +63,20 @@ export default function KhokharSite() {
   return (
     <main className="min-h-screen bg-onyx text-stone-100 font-body overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 inset-x-0 z-50 mix-blend-difference">
-        <div className="flex items-center justify-between px-6 md:px-12 py-6">
-          <a href="#top" className="font-display font-bold text-lg md:text-xl tracking-tighter">
-            KHOKHAR<span className="text-gold">.</span>
+      <nav className="fixed top-0 inset-x-0 z-50">
+        <div className="absolute inset-0 bg-gradient-to-b from-onyx/80 via-onyx/40 to-transparent pointer-events-none" />
+        <div className="relative flex items-center justify-between px-6 md:px-12 py-5">
+          <a href="#top" className="flex items-center gap-3 group">
+            <img
+              src={logoImg}
+              alt="Khokhar Engineering Services logo"
+              width={40}
+              height={40}
+              className="h-9 w-9 md:h-10 md:w-10 object-contain"
+            />
+            <span className="font-display font-bold text-lg md:text-xl tracking-tighter hidden sm:inline">
+              KHOKHAR<span className="text-gold">.</span>
+            </span>
           </a>
           <div className="hidden md:flex items-center gap-10 text-[11px] font-medium tracking-[0.25em] uppercase">
             <a href="#disciplines" className="gold-underline hover:text-gold transition-colors">
