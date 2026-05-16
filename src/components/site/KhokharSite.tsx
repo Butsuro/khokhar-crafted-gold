@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useReveal } from "@/hooks/useReveal";
 import heroImg from "@/assets/hero.jpg";
+import logoImg from "@/assets/logo.jpg";
 import civilImg from "@/assets/civil.jpg";
 import electricalImg from "@/assets/electrical.jpg";
 import mechanicalImg from "@/assets/mechanical.jpg";
