@@ -11,8 +11,7 @@ const disciplines = [
     n: "01",
     title: "Civil",
     sub: "Roads · Buildings · Structures",
-    body:
-      "Road carpeting, structural repairs, and large-scale building maintenance across Karachi's commercial, residential, and industrial districts.",
+    body: "Road carpeting, structural repairs, and large-scale building maintenance across Karachi's commercial, residential, and industrial districts.",
     img: civilImg,
     alt: "Roadwork machinery at sunset",
   },
@@ -20,8 +19,7 @@ const disciplines = [
     n: "02",
     title: "Electrical",
     sub: "Power · Grid · Industrial",
-    body:
-      "High-voltage maintenance, distribution panels, lighting retrofits, and industrial electrical installations engineered for continuous uptime.",
+    body: "High-voltage maintenance, distribution panels, lighting retrofits, and industrial electrical installations engineered for continuous uptime.",
     img: electricalImg,
     alt: "Industrial electrical control panel close up",
   },
@@ -29,8 +27,7 @@ const disciplines = [
     n: "03",
     title: "Mechanical",
     sub: "HVAC · Plant · Machinery",
-    body:
-      "Lifecycle servicing for HVAC, pumping stations, and heavy machinery — precision upkeep that keeps facilities running at full capacity.",
+    body: "Lifecycle servicing for HVAC, pumping stations, and heavy machinery — precision upkeep that keeps facilities running at full capacity.",
     img: mechanicalImg,
     alt: "Heavy industrial gears close up",
   },
@@ -169,10 +166,7 @@ export default function KhokharSite() {
               Request a proposal
               <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
             </a>
-            <a
-              href="#disciplines"
-              className="group flex items-center gap-4 cursor-pointer"
-            >
+            <a href="#disciplines" className="group flex items-center gap-4 cursor-pointer">
               <span className="h-px w-10 bg-gold transition-all duration-500 group-hover:w-20" />
               <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-stone-300 group-hover:text-gold transition-colors">
                 See what we do
@@ -191,9 +185,7 @@ export default function KhokharSite() {
           ].map(([k, v]) => (
             <div key={v} className="bg-onyx px-6 py-6">
               <div className="font-display text-2xl md:text-3xl font-semibold text-gold">{k}</div>
-              <div className="mt-1 text-[10px] uppercase tracking-[0.25em] text-stone-500">
-                {v}
-              </div>
+              <div className="mt-1 text-[10px] uppercase tracking-[0.25em] text-stone-500">{v}</div>
             </div>
           ))}
         </div>
@@ -219,10 +211,7 @@ export default function KhokharSite() {
       </section>
 
       {/* DISCIPLINES */}
-      <section
-        id="disciplines"
-        className="relative px-6 md:px-12 lg:px-20 py-28 md:py-40"
-      >
+      <section id="disciplines" className="relative px-6 md:px-12 lg:px-20 py-28 md:py-40">
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-20 md:mb-28">
           <div className="reveal max-w-xl">
             <div className="flex items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-gold mb-6">
@@ -330,9 +319,7 @@ export default function KhokharSite() {
                 style={{ animationDelay: `${0.1 * i}s` }}
               >
                 <div className="flex items-baseline gap-4">
-                  <span className="font-display text-2xl text-gold tabular-nums">
-                    0{i + 1}
-                  </span>
+                  <span className="font-display text-2xl text-gold tabular-nums">0{i + 1}</span>
                   <span className="h-px flex-1 bg-white/10" />
                 </div>
                 <h3 className="font-display text-xl md:text-2xl font-semibold tracking-tight">
@@ -365,28 +352,28 @@ export default function KhokharSite() {
         <div className="grid md:grid-cols-2 gap-12 md:gap-20">
           <div className="space-y-10">
             <p className="text-stone-400 leading-relaxed max-w-md">
-              Whether it's a road that needs resurfacing, a building under retrofit, or a plant
-              that won't stay online — we'll see it, scope it, and quote it.
+              Whether it's a road that needs resurfacing, a building under retrofit, or a plant that
+              won't stay online — we'll see it, scope it, and quote it.
             </p>
 
             <div className="space-y-6">
               <a
-                href="mailto:info@khokhareng.com"
+                href="mailto:kes.engineering005@gmail.com"
                 className="block group border-t border-white/10 pt-4"
               >
                 <div className="text-[10px] uppercase tracking-[0.3em] text-stone-500 mb-1">
                   Email
                 </div>
                 <div className="font-display text-2xl md:text-3xl font-medium group-hover:text-gold transition-colors">
-                  info@khokhareng.com
+                  kes.engineering005@gmail .com
                 </div>
               </a>
-              <a href="tel:+922134567890" className="block group border-t border-white/10 pt-4">
+              <a href="tel:+923147744110" className="block group border-t border-white/10 pt-4">
                 <div className="text-[10px] uppercase tracking-[0.3em] text-stone-500 mb-1">
                   Phone
                 </div>
                 <div className="font-display text-2xl md:text-3xl font-medium group-hover:text-gold transition-colors">
-                  +92 21 3456 7890
+                  +92 314 7744110
                 </div>
               </a>
               <div className="border-t border-white/10 pt-4">
@@ -407,12 +394,12 @@ export default function KhokharSite() {
               const form = e.currentTarget;
               const data = new FormData(form);
               const subject = encodeURIComponent(
-                `Inquiry · ${data.get("service") ?? "Engineering"}`
+                `Inquiry · ${data.get("service") ?? "Engineering"}`,
               );
               const body = encodeURIComponent(
                 `Name: ${data.get("name")}\nService: ${data.get("service")}\nLocation: ${data.get(
-                  "location"
-                )}\n\n${data.get("message")}`
+                  "location",
+                )}\n\n${data.get("message")}`,
               );
               window.location.href = `mailto:info@khokhareng.com?subject=${subject}&body=${body}`;
             }}
@@ -422,7 +409,12 @@ export default function KhokharSite() {
               label="Service required"
               name="service"
               as="select"
-              options={["Civil engineering", "Electrical systems", "Mechanical maintenance", "Multi-disciplinary"]}
+              options={[
+                "Civil engineering",
+                "Electrical systems",
+                "Mechanical maintenance",
+                "Multi-disciplinary",
+              ]}
             />
             <Field label="Site location" name="location" placeholder="Area in Karachi" />
             <Field
@@ -474,7 +466,13 @@ function Field({ label, name, placeholder, required, as = "input", options }: Fi
     <label className="block border-b border-white/15 pb-2 focus-within:border-gold transition-colors">
       <span className="text-[10px] uppercase tracking-[0.3em] text-stone-500">{label}</span>
       {as === "textarea" ? (
-        <textarea name={name} placeholder={placeholder} required={required} rows={3} className={common} />
+        <textarea
+          name={name}
+          placeholder={placeholder}
+          required={required}
+          rows={3}
+          className={common}
+        />
       ) : as === "select" ? (
         <select name={name} className={common} defaultValue={options?.[0]}>
           {options?.map((o) => (
