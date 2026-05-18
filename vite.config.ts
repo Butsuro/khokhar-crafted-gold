@@ -8,6 +8,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 // Vercel preset: Nitro generates a Vercel-compatible serverless output.
 export default defineConfig({
+  cloudflare: false,
   tanstackStart: {
     server: { preset: "vercel" },
   },
